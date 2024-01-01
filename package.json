@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many --target serve --all --parallel"
+    "start": "nx run-many --target serve --all --parallel",
+    "build": "nx run-many --target build --all --parallel",
+    "lint:check": "nx run-many --target lint --all --parallel",
+    "format:check": "prettier --check \"apps/**/*.{js,ts,tsx}\"",
+    "format:fix": "prettier --write \"apps/**/*.{js,ts,tsx}\""
   },
   "private": true,
   "dependencies": {
